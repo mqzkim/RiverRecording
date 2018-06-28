@@ -1,5 +1,5 @@
 //
-//  DashboardViewController.swift
+//  MainViewController.swift
 //  RiverRecording
 //
 //  Created by Marquez on 29/06/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DashboardViewController: UIViewController {
+class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
