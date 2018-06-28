@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vxF-Ui-M4f">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,19 +10,115 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="HRP-H7-Xq2">
+            <objects>
+                <navigationController id="vxF-Ui-M4f" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dqu-Cy-3eW">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tAZ-jL-UcO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dKE-uI-jVz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1749" y="-97"/>
+        </scene>
+        <!--RiverRecord-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="RiverRecording" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zah-b7-2Qb">
+                                <rect key="frame" x="0.0" y="104" width="375" height="211"/>
+                                <color key="backgroundColor" red="0.25882352939999997" green="0.4039215686" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Zah-b7-2Qb" secondAttribute="height" multiplier="16:9" id="vfa-zU-ond"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kMJ-od-Ak1">
+                                <rect key="frame" x="0.0" y="315" width="375" height="224"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WYQ-bN-wh6">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1Cv-lA-RXe">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycy-AZ-wHU">
+                                <rect key="frame" x="40" y="585" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="1sR-NC-5Cl"/>
+                                    <constraint firstAttribute="height" constant="36" id="sAt-Wv-YKp"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="save_48"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSk-2j-CXM">
+                                <rect key="frame" x="163.5" y="579" width="48" height="48"/>
+                                <state key="normal" image="disk_48"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ta-3B-e7D">
+                                <rect key="frame" x="299" y="585" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="1BP-vx-XF9"/>
+                                    <constraint firstAttribute="height" constant="36" id="nUF-kq-9IV"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="photo_48"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GSk-2j-CXM" firstAttribute="top" secondItem="kMJ-od-Ak1" secondAttribute="bottom" constant="40" id="81x-xh-xWg"/>
+                            <constraint firstItem="ycy-AZ-wHU" firstAttribute="centerY" secondItem="GSk-2j-CXM" secondAttribute="centerY" id="84w-K4-Uer"/>
+                            <constraint firstItem="kMJ-od-Ak1" firstAttribute="top" secondItem="Zah-b7-2Qb" secondAttribute="bottom" id="CTt-Dn-26U"/>
+                            <constraint firstItem="GSk-2j-CXM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HNm-1b-X6D"/>
+                            <constraint firstItem="ycy-AZ-wHU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="HqX-1B-iWW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GSk-2j-CXM" secondAttribute="bottom" constant="40" id="Mkw-3L-Wq5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kMJ-od-Ak1" secondAttribute="trailing" id="S3s-jO-P9u"/>
+                            <constraint firstItem="kMJ-od-Ak1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vkg-gH-mmi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Ta-3B-e7D" secondAttribute="trailing" constant="40" id="avn-e3-ZlS"/>
+                            <constraint firstItem="Zah-b7-2Qb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="gzJ-o8-Wy1"/>
+                            <constraint firstItem="Zah-b7-2Qb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="r13-GK-rBz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zah-b7-2Qb" secondAttribute="trailing" id="sIF-pt-Kfa"/>
+                            <constraint firstItem="1Ta-3B-e7D" firstAttribute="centerY" secondItem="GSk-2j-CXM" secondAttribute="centerY" id="xzO-xa-127"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="RiverRecord" id="kng-ka-8cq">
+                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="qxy-k3-o5A"/>
+                        <barButtonItem key="rightBarButtonItem" image="gear_24" id="Eg6-QP-vfO"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="kMJ-od-Ak1" id="X0P-Rh-45G"/>
+                        <outlet property="wfView" destination="Zah-b7-2Qb" id="iT8-Pg-K4X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-762.39999999999998" y="-98.50074962518741"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="disk_48" width="48" height="48"/>
+        <image name="gear_24" width="24" height="24"/>
+        <image name="photo_48" width="48" height="48"/>
+        <image name="save_48" width="48" height="48"/>
+    </resources>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

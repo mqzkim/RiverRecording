@@ -8,13 +8,10 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: ViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-
+    @IBOutlet weak var wfView: UIView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
 }
 
