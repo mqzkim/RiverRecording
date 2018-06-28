@@ -7,6 +7,8 @@ target 'RiverRecording' do
 
   # Pods for RiverRecording
   pod 'Firebase/Core'
+  pod 'IGListKit'
+  pod 'RxSwift'
 
   target 'RiverRecordingTests' do
     inherit! :search_paths

@@ -16,14 +16,22 @@ PODS:
   - GoogleToolboxForMac/Defines (2.1.4)
   - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
     - GoogleToolboxForMac/Defines (= 2.1.4)
+  - IGListKit (3.4.0):
+    - IGListKit/Default (= 3.4.0)
+  - IGListKit/Default (3.4.0):
+    - IGListKit/Diffing
+  - IGListKit/Diffing (3.4.0)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - RxSwift (4.2.0)
 
 DEPENDENCIES:
   - Firebase/Core
+  - IGListKit
+  - RxSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -32,7 +40,9 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseInstanceID
     - GoogleToolboxForMac
+    - IGListKit
     - nanopb
+    - RxSwift
 
 SPEC CHECKSUMS:
   Firebase: 25ed0412036d7d008568d1fb4d2e9d81ea8a0a2c
@@ -40,8 +50,10 @@ SPEC CHECKSUMS:
   FirebaseCore: a3c87242451633fff8490183898075ce77d168d2
   FirebaseInstanceID: 05d779cbb97bd5bd5c51a38a903fc9cfe1b2454a
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
+  IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
 
-PODFILE CHECKSUM: 07b35b979ba168e3c9faf905d8d8775fbab66422
+PODFILE CHECKSUM: e852e870e7996097a121c5f815e638282d95b120
 
 COCOAPODS: 1.5.3

@@ -101,6 +101,22 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		4F7D785220E554FF00477244 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4F7D785520E5552700477244 /* Photo */,
+				4FDEB9B620E53EC90032924E /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		4F7D785520E5552700477244 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
 		4FDEB9A820E53EC90032924E = {
 			isa = PBXGroup;
 			children = (
@@ -159,7 +175,7 @@
 		4FF040A820E53FCC00AFE721 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4FDEB9B620E53EC90032924E /* MainViewController.swift */,
+				4F7D785220E554FF00477244 /* Main */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -345,11 +361,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RiverRecording/Pods-RiverRecording-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
