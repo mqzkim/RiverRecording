@@ -26,12 +26,17 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - RxCocoa (4.2.0):
+    - RxSwift (~> 4.0)
   - RxSwift (4.2.0)
+  - SnapKit (4.0.0)
 
 DEPENDENCIES:
   - Firebase/Core
   - IGListKit
+  - RxCocoa
   - RxSwift
+  - SnapKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -42,7 +47,9 @@ SPEC REPOS:
     - GoogleToolboxForMac
     - IGListKit
     - nanopb
+    - RxCocoa
     - RxSwift
+    - SnapKit
 
 SPEC CHECKSUMS:
   Firebase: 25ed0412036d7d008568d1fb4d2e9d81ea8a0a2c
@@ -52,8 +59,10 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: e852e870e7996097a121c5f815e638282d95b120
+PODFILE CHECKSUM: f426f0b7f281fd73389a1392f7648e13df4a9cd1
 
 COCOAPODS: 1.5.3

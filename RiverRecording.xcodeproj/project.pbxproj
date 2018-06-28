@@ -10,6 +10,9 @@
 		324343D7C9F6317190734129 /* Pods_RiverRecording.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3114312A373BA222B281B35 /* Pods_RiverRecording.framework */; };
 		46066B9F1C60073BC2E1D558 /* Pods_RiverRecordingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE17276F4278A069191557E /* Pods_RiverRecordingUITests.framework */; };
 		4F7D785120E550DC00477244 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7D785020E550DC00477244 /* ViewController.swift */; };
+		4F7D785720E5619300477244 /* PhotoDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7D785620E5619300477244 /* PhotoDataProvider.swift */; };
+		4F7D785920E561B000477244 /* PhotoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7D785820E561B000477244 /* PhotoSection.swift */; };
+		4F7D785B20E561BE00477244 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7D785A20E561BE00477244 /* PhotoCell.swift */; };
 		4FDEB9B520E53EC90032924E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEB9B420E53EC90032924E /* AppDelegate.swift */; };
 		4FDEB9B720E53EC90032924E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEB9B620E53EC90032924E /* MainViewController.swift */; };
 		4FDEB9BA20E53EC90032924E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB9B820E53EC90032924E /* Main.storyboard */; };
@@ -40,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		4F7D785020E550DC00477244 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4F7D785620E5619300477244 /* PhotoDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDataProvider.swift; sourceTree = "<group>"; };
+		4F7D785820E561B000477244 /* PhotoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSection.swift; sourceTree = "<group>"; };
+		4F7D785A20E561BE00477244 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		4FDEB9B120E53EC90032924E /* RiverRecording.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RiverRecording.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FDEB9B420E53EC90032924E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FDEB9B620E53EC90032924E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +119,9 @@
 		4F7D785520E5552700477244 /* Photo */ = {
 			isa = PBXGroup;
 			children = (
+				4F7D785620E5619300477244 /* PhotoDataProvider.swift */,
+				4F7D785820E561B000477244 /* PhotoSection.swift */,
+				4F7D785A20E561BE00477244 /* PhotoCell.swift */,
 			);
 			path = Photo;
 			sourceTree = "<group>";
@@ -362,14 +371,18 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-RiverRecording/Pods-RiverRecording-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,8 +433,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F7D785920E561B000477244 /* PhotoSection.swift in Sources */,
 				4F7D785120E550DC00477244 /* ViewController.swift in Sources */,
+				4F7D785720E5619300477244 /* PhotoDataProvider.swift in Sources */,
 				4FDEB9B720E53EC90032924E /* MainViewController.swift in Sources */,
+				4F7D785B20E561BE00477244 /* PhotoCell.swift in Sources */,
 				4FDEB9B520E53EC90032924E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,6 +550,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -587,6 +604,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
